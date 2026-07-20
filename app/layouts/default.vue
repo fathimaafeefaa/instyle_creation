@@ -2,79 +2,52 @@
 /**
  * app/layouts/default.vue
  *
- * Default layout — sticky header + main content slot + footer.
- *
- * RTL audit:
- *   — container-pad uses px-* which is NOT logical. Fixed via the utility
- *     class definition in main.css using ps-/pe-.
- *   — Header inner div uses justify-between (direction-agnostic).
- *   — gap-* values are direction-agnostic.
- *   — No directional margins or paddings are applied inline here.
- *   — LocaleSwitcher renders in the actions slot and handles its own layout.
- *
- * Named slots:
- *   logo     — brand wordmark / link (default provided)
- *   nav      — primary navigation links
- *   actions  — locale switcher + optional CTA (default: LocaleSwitcher)
- *   footer   — footer content (default stub provided)
+ * Default layout — header (logo + nav + locale switcher) + main slot + footer.
+ * All content is intentionally left as structural stubs; real content
+ * will be wired up via i18n keys and data files in subsequent steps.
  */
 const localePath = useLocalePath()
 </script>
 
 <template>
   <div class="layout-root flex min-h-screen flex-col">
-
-    <!-- ── Header ──────────────────────────────────────────────── -->
-    <header class="layout-header sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur-sm">
+    <!-- ── Header ─────────────────────────────────────── -->
+    <header class="layout-header sticky top-0 z-50 border-b border-[--color-border] bg-[--color-surface]/95 backdrop-blur-sm">
       <div class="container-pad mx-auto flex h-16 max-w-7xl items-center justify-between">
-
-        <!-- Logo: NuxtLink to localised home path -->
+        <!-- Logo slot — override in specific pages if needed -->
         <slot name="logo">
-          <NuxtLink
-            :to="localePath('/')"
-            class="flex items-center gap-2 font-heading text-xl font-[500] text-ink hover:text-amber transition-colors duration-[--duration-fast]"
-            :aria-label="'InStyle Creation — ' + $t('nav.home')"
-          >
-            InStyle Creation
+          <NuxtLink :to="localePath('/')" class="flex items-center gap-2 font-semibold text-[--color-primary]">
+            <span class="text-xl tracking-tight">InStyle Creation</span>
           </NuxtLink>
         </slot>
 
-        <!-- Main nav — hidden on mobile (mobile menu TBD) -->
-        <nav
-          class="hidden md:flex items-center gap-8"
-          :aria-label="$t('nav.open_menu')"
-        >
+        <!-- Main navigation slot -->
+        <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
           <slot name="nav" />
         </nav>
 
-        <!-- Actions: locale switcher + optional CTA -->
+        <!-- Actions slot (locale switcher, CTA button, mobile menu toggle) -->
         <div class="flex items-center gap-4">
-          <slot name="actions">
-            <!-- Default: just the locale switcher -->
-            <UiLocaleSwitcher />
-          </slot>
+          <slot name="actions" />
         </div>
-
       </div>
     </header>
 
-    <!-- ── Main content ───────────────────────────────────────── -->
+    <!-- ── Main content ───────────────────────────────── -->
     <main class="layout-main flex-1">
       <slot />
     </main>
 
-    <!-- ── Footer ─────────────────────────────────────────────── -->
-    <footer class="layout-footer border-t border-border bg-surface-muted">
-      <div class="container-pad mx-auto max-w-7xl py-8">
+    <!-- ── Footer ─────────────────────────────────────── -->
+    <footer class="layout-footer border-t border-[--color-border] bg-[--color-surface-muted]">
+      <div class="container-pad mx-auto max-w-7xl section-py">
         <slot name="footer">
-          <!-- Stub — replaced with real Footer component in a later step -->
-          <p class="text-center text-sm text-steel">
-            © {{ new Date().getFullYear() }} InStyle Creation.
-            {{ $t('footer.rights') }}
+          <!-- Footer content stub — to be replaced with real components -->
+          <p class="text-center text-sm text-[--color-text-muted]">
+            © {{ new Date().getFullYear() }} InStyle Creation. All rights reserved.
           </p>
         </slot>
       </div>
     </footer>
-
   </div>
 </template>

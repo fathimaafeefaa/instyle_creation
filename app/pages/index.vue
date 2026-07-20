@@ -5,6 +5,7 @@
  * ⚠️  TEMPORARY — visual verification scaffold only.
  * Remove all content inside <template> before the next development step.
  */
+definePageMeta({ layout: false })
 </script>
 
 <template>

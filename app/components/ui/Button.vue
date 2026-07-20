@@ -4,19 +4,25 @@
  *
  * Brand button primitive — enforces amber discipline site-wide.
  *
- * RTL audit:
- *   px-* (horizontal padding) → replaced with ps-* / pe-* (logical)
- *     ps- = padding-inline-start → left in LTR, right in RTL
- *     pe- = padding-inline-end   → right in LTR, left in RTL
- *   gap-2 (flex gap) → direction-agnostic, no change needed
- *   rounded-sm → direction-agnostic, no change needed
+ * Variants
+ *   "primary"  Amber fill · white text.
+ *              Use ONLY for the single most important action on a given screen.
+ *   "ghost"    Transparent · ink-coloured border and text.
+ *              Use for secondary actions, nav CTAs, or wherever primary would
+ *              compete with another amber element in the same viewport.
  *
- * Variants:
- *   "primary"  Amber fill · white text. One per viewport max.
- *   "ghost"    Ink border + transparent. Secondary actions.
+ * Sizes
+ *   "sm"  compact inline button
+ *   "md"  standard button (default)
  *
- * Sizes:   "sm" | "md"  (default: "md")
- * Props:   variant, size, as (polymorphic tag), disabled, loading, type
+ * Props
+ *   variant  'primary' | 'ghost'   (default: 'primary')
+ *   size     'sm' | 'md'           (default: 'md')
+ *   as       tag name or component  (default: 'button') — makes it polymorphic
+ *            e.g. as="a", as="NuxtLink"
+ *   disabled boolean
+ *   loading  boolean — shows spinner, disables interaction
+ *   type     HTMLButtonElement['type'] (default: 'button')
  */
 
 interface Props {
@@ -37,19 +43,17 @@ const {
   type = 'button',
 } = defineProps<Props>()
 
-// ── Base styles ─────────────────────────────────────────────────────────────
-// gap-2: direction-agnostic spacing (flex-inline gap doesn't flip)
-// No directional padding or margin here — pushed into sizeClass below.
+// ── Base styles shared by both variants ────────────────────────────────────
 const base = [
   'inline-flex items-center justify-center gap-2',
   'font-sans font-[500] tracking-[0.01em]',
-  'rounded-sm border transition-all duration-[--duration-base]',
+  'rounded-sm border transition-all',
   'select-none cursor-pointer',
   'focus-visible:focus-ring',
   'disabled:pointer-events-none disabled:opacity-40',
 ].join(' ')
 
-// ── Variant colours ──────────────────────────────────────────────────────────
+// ── Variant-specific colours ────────────────────────────────────────────────
 const variantClass: Record<string, string> = {
   primary: [
     'border-transparent',
@@ -65,13 +69,10 @@ const variantClass: Record<string, string> = {
   ].join(' '),
 }
 
-// ── Sizes — using logical inline padding (ps-/pe-) for RTL correctness ───────
-// ps- = padding-inline-start, pe- = padding-inline-end
-// In LTR: ps- is left, pe- is right. In RTL: automatically flipped.
-// py- (block padding) is direction-neutral, kept as-is.
+// ── Size-specific padding / text ────────────────────────────────────────────
 const sizeClass: Record<string, string> = {
-  sm: 'ps-4 pe-4 py-2 text-sm',
-  md: 'ps-6 pe-6 py-3 text-sm',
+  sm: 'px-4 py-2 text-sm',
+  md: 'px-6 py-3 text-sm',
 }
 
 const classes = computed(() =>
@@ -95,7 +96,7 @@ const classes = computed(() =>
     :aria-disabled="disabled || loading || undefined"
     :aria-busy="loading || undefined"
   >
-    <!-- Loading spinner — border-t-transparent creates the gap regardless of dir -->
+    <!-- Loading spinner (16×16, matches current text colour) -->
     <span
       v-if="loading"
       class="size-4 shrink-0 animate-spin rounded-full border-2 border-current border-t-transparent"

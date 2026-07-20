@@ -1,189 +1,86 @@
 {
-  "_note": "Arabic translations are placeholders only. Replace 'AR: <key>' values with real translations before launch. Do NOT auto-translate.",
-
   "nav": {
-    "home":     "AR: Home",
-    "services": "AR: Services",
-    "projects": "AR: Projects",
-    "about":    "AR: About",
-    "contact":  "AR: Contact",
-    "open_menu":  "AR: Open navigation menu",
-    "close_menu": "AR: Close navigation menu"
+    "home": "الرئيسية",
+    "services": "خدماتنا",
+    "projects": "المشاريع",
+    "about": "عن الشركة",
+    "contact": "تواصل معنا"
   },
-
-  "common": {
-    "read_more":     "AR: Read more",
-    "view_all":      "AR: View all",
-    "contact_us":    "AR: Contact us",
-    "enquire_now":   "AR: Enquire now",
-    "get_in_touch":  "AR: Get in touch",
-    "learn_more":    "AR: Learn more",
-    "start_project": "AR: Start your project",
-    "view_work":     "AR: View our work",
-    "back":          "AR: Back",
-    "close":         "AR: Close",
-    "loading":       "AR: Loading…",
-    "send":          "AR: Send",
-    "submit":        "AR: Submit",
-    "required":      "AR: Required",
-    "optional":      "AR: Optional",
-    "aria": {
-      "external_link": "AR: Opens in a new tab",
-      "scroll_top":    "AR: Scroll to top"
-    }
-  },
-
-  "locale": {
-    "switch_to": "English",
-    "current":   "AR: Arabic",
-    "label":     "AR: Change language"
-  },
-
   "hero": {
-    "eyebrow":       "AR: Premium Interior Design",
-    "title":         "AR: Spaces Crafted With Purpose",
-    "subtitle":      "AR: Award-winning interior design and fit-out solutions for residential, commercial, and hospitality projects across the UAE.",
-    "cta_primary":   "AR: Start your project",
-    "cta_secondary": "AR: View our work"
+    "eyebrow": "تصميم داخلي فاخر",
+    "title": "مساحات مصمَّمة\nبعناية واحتراف",
+    "subtitle": "حلول تصميم داخلي وتجهيز حائزة على جوائز للمشاريع السكنية والتجارية والضيافة في الإمارات العربية المتحدة.",
+    "cta_primary": "ابدأ مشروعك",
+    "cta_secondary": "استعرض أعمالنا"
   },
-
   "services": {
-    "eyebrow":  "AR: What We Do",
-    "title":    "AR: Our Services",
-    "subtitle": "AR: From concept to completion, we deliver end-to-end interior design solutions tailored to your vision.",
-    "enquire":  "AR: Enquire about this service",
+    "eyebrow": "ما نقدمه",
+    "title": "خدماتنا",
+    "subtitle": "من الفكرة إلى التسليم، نقدم حلول تصميم داخلي متكاملة مصممة خصيصًا لرؤيتك.",
     "items": {
       "interior-design": {
-        "title":       "AR: Interior Design",
-        "description": "AR: Bespoke interior concepts that balance aesthetics, functionality, and your personal style."
+        "title": "التصميم الداخلي",
+        "description": "مفاهيم تصميم داخلي مخصصة تجمع بين الجمالية والوظيفية وأسلوبك الشخصي."
       },
       "fit-out": {
-        "title":       "AR: Fit-Out",
-        "description": "AR: Expert construction and fit-out execution with attention to craftsmanship and timelines."
+        "title": "التجهيز والتشطيب",
+        "description": "تنفيذ بناء وتجهيز احترافي مع الاهتمام بالحرفية والمواعيد."
       },
       "space-planning": {
-        "title":       "AR: Space Planning",
-        "description": "AR: Optimised floor plans that maximise flow, light, and utility within any footprint."
+        "title": "تخطيط المساحات",
+        "description": "مخططات طوابق محسّنة تزيد من التدفق والإضاءة والاستفادة المثلى من كل متر."
       },
       "furniture-supply": {
-        "title":       "AR: Furniture Supply",
-        "description": "AR: Curated furniture and décor sourced from leading international and regional brands."
+        "title": "توريد الأثاث",
+        "description": "أثاث وديكور منتقى بعناية من كبرى العلامات التجارية الدولية والإقليمية."
       },
       "lighting-design": {
-        "title":       "AR: Lighting Design",
-        "description": "AR: Ambient, task, and accent lighting schemes that define mood and highlight architecture."
+        "title": "تصميم الإضاءة",
+        "description": "أنظمة إضاءة محيطية ووظيفية وزخرفية تحدد الأجواء وتبرز العمارة."
       },
       "project-management": {
-        "title":       "AR: Project Management",
-        "description": "AR: End-to-end oversight from brief to handover — on time, on budget, no surprises."
+        "title": "إدارة المشاريع",
+        "description": "إشراف شامل من الإحاطة إلى التسليم — في الوقت المحدد وضمن الميزانية."
       }
     }
   },
-
-  "projects": {
-    "eyebrow":   "AR: Our Portfolio",
-    "title":     "AR: Featured Projects",
-    "subtitle":  "AR: A selection of residential, commercial, and hospitality spaces we have brought to life.",
-    "view_all":  "AR: View all projects",
-    "read_more": "AR: Read more about this project",
-    "categories": {
-      "all":         "AR: All",
-      "residential": "AR: Residential",
-      "commercial":  "AR: Commercial",
-      "hospitality": "AR: Hospitality",
-      "retail":      "AR: Retail",
-      "office":      "AR: Office"
-    },
-    "items": {
-      "villa-arabesque":    { "title": "AR: Villa Arabesque",    "location": "AR: Dubai, UAE" },
-      "downtown-penthouse": { "title": "AR: Downtown Penthouse", "location": "AR: Dubai, UAE" },
-      "grand-lobby-dubai":  { "title": "AR: Grand Lobby Dubai",  "location": "AR: Dubai, UAE" },
-      "boutique-hotel-abu": { "title": "AR: Boutique Hotel",     "location": "AR: Abu Dhabi, UAE" },
-      "flagship-store-dxb": { "title": "AR: Flagship Store",     "location": "AR: Dubai, UAE" },
-      "tech-campus-office": { "title": "AR: Tech Campus Office", "location": "AR: Abu Dhabi, UAE" }
-    }
-  },
-
   "stats": {
-    "projects_completed": "AR: Projects Completed",
-    "years_experience":   "AR: Years of Experience",
-    "happy_clients":      "AR: Happy Clients",
-    "countries_served":   "AR: Countries Served"
+    "projects_completed": "مشروع منجز",
+    "years_experience": "عامًا من الخبرة",
+    "happy_clients": "عميل راضٍ",
+    "countries_served": "دول نخدمها"
   },
-
   "clients": {
-    "eyebrow":    "AR: Trusted By",
-    "title":      "AR: Clients Who Trust Us",
-    "aria_label": "AR: Our clients"
+    "eyebrow": "يثقون بنا",
+    "title": "عملاؤنا الكرام",
+    "aria_label": "عملاؤنا"
   },
-
   "testimonials": {
-    "eyebrow":  "AR: What They Say",
-    "title":    "AR: Client Stories",
-    "subtitle": "AR: Don't take our word for it — hear from the people we've had the privilege of working with.",
-    "prev":     "AR: Previous testimonial",
-    "next":     "AR: Next testimonial",
-    "of":       "AR: of"
+    "eyebrow": "ماذا يقولون",
+    "title": "قصص عملائنا",
+    "subtitle": "لا تأخذ كلامنا — استمع إلى من أتاحوا لنا شرف العمل معهم.",
+    "prev": "الشهادة السابقة",
+    "next": "الشهادة التالية"
   },
-
   "cta": {
-    "eyebrow":  "AR: Let's Work Together",
-    "title":    "AR: Ready to Transform Your Space?",
-    "subtitle": "AR: Let's discuss your vision. Our design team is ready to bring it to life.",
-    "button":   "AR: Enquire now"
+    "title": "هل أنت مستعد\nلتحويل مساحتك؟",
+    "subtitle": "دعنا نناقش رؤيتك. فريق التصميم لدينا مستعد لإحيائها.",
+    "button": "تواصل معنا"
   },
-
   "contact": {
-    "eyebrow":  "AR: Get in Touch",
-    "title":    "AR: Contact Us",
-    "subtitle": "AR: Fill in the form and our team will get back to you within 24 hours.",
-    "fields": {
-      "name":    "AR: Full Name",
-      "email":   "AR: Email Address",
-      "phone":   "AR: Phone Number",
-      "subject": "AR: Subject",
-      "message": "AR: Your Message"
-    },
-    "placeholders": {
-      "name":    "AR: e.g. Ahmed Al Mansouri",
-      "email":   "AR: your@email.com",
-      "phone":   "AR: +971 50 000 0000",
-      "subject": "AR: e.g. Villa interior design",
-      "message": "AR: Tell us about your project…"
-    },
-    "submit":  "AR: Send message",
-    "success": "AR: Thank you! We'll be in touch shortly.",
-    "error":   "AR: Something went wrong. Please try again or call us directly."
+    "title": "تواصل معنا",
+    "subtitle": "أرسل النموذج وسيتواصل فريقنا معك خلال 24 ساعة.",
+    "name": "الاسم الكامل",
+    "email": "البريد الإلكتروني",
+    "phone": "رقم الهاتف",
+    "subject": "الموضوع",
+    "message": "رسالتك",
+    "submit": "إرسال الرسالة",
+    "success": "شكرًا! سنتواصل معك قريبًا.",
+    "error": "حدث خطأ ما. يرجى المحاولة مرة أخرى."
   },
-
-  "about": {
-    "eyebrow":   "AR: Our Story",
-    "title":     "AR: Crafting Spaces Since 2012",
-    "subtitle":  "AR: Founded in Dubai, InStyle Creation has delivered over 350 premium interior projects across the UAE and the wider region.",
-    "read_more": "AR: Read our story"
-  },
-
   "footer": {
-    "tagline":      "AR: Crafting spaces that inspire.",
-    "rights":       "AR: All rights reserved.",
-    "address_label": "AR: Address",
-    "phone_label":   "AR: Phone",
-    "email_label":   "AR: Email",
-    "nav_label":     "AR: Quick links",
-    "legal_label":   "AR: Legal",
-    "privacy":       "AR: Privacy Policy",
-    "terms":         "AR: Terms of Service"
-  },
-
-  "errors": {
-    "not_found_title":   "AR: Page not found",
-    "not_found_message": "AR: The page you're looking for doesn't exist or has been moved.",
-    "go_home":           "AR: Go to homepage",
-    "validation": {
-      "required":   "AR: This field is required",
-      "email":      "AR: Please enter a valid email address",
-      "min_length": "AR: Must be at least {n} characters",
-      "max_length": "AR: Must be no more than {n} characters"
-    }
+    "tagline": "نصنع مساحات تُلهم.",
+    "rights": "جميع الحقوق محفوظة."
   }
 }

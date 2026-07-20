@@ -5,24 +5,18 @@
  * Canonical section heading primitive used across every page section.
  * — Do NOT duplicate this markup elsewhere —
  *
- * RTL: uses logical CSS properties (text-start, items-start) so the browser
- * mirrors alignment automatically when dir="rtl" is on <html>.
- * Tailwind v4 logical utilities:
- *   text-start / text-end  →  replaces text-left / text-right
- *   items-start / items-end →  fine as-is (flexbox logical)
- *
  * Anatomy:
  *   [eyebrow]   optional · font-sans · steel · uppercase · wide tracking
  *   [title]     required  · font-heading (Fraunces) · ink
  *   [subtitle]  optional  · font-sans · steel · normal weight
  *
  * Props:
- *   title    string            — Main heading (rendered as h2 by default)
- *   eyebrow  string            — Short label above the title
- *   subtitle string            — Supporting copy below the title
- *   align    'start' | 'center' | 'end'  — logical alignment (RTL-aware)
- *   level    2 | 3 | 4         — semantic heading level
- *   dark     boolean           — flip to light colours for dark-bg sections
+ *   title    string  — Main heading (rendered as h2 by default)
+ *   eyebrow  string  — Short label above the title
+ *   subtitle string  — Supporting copy below the title
+ *   align    'start' | 'center' | 'end'  — text/flex alignment
+ *   level    2 | 3 | 4  — semantic heading level (visual size stays the same)
+ *   dark     boolean  — flip to light colours for dark-background sections
  */
 
 interface Props {
@@ -45,8 +39,6 @@ const {
 
 const tag = computed(() => `h${level}` as 'h2' | 'h3' | 'h4')
 
-// text-start / text-end are Tailwind logical utilities — they map to
-// text-align: start / end, which flips automatically with dir="rtl".
 const alignClass: Record<string, string> = {
   start:  'items-start text-start',
   center: 'items-center text-center',
@@ -68,7 +60,7 @@ const alignClass: Record<string, string> = {
       {{ eyebrow }}
     </p>
 
-    <!-- Main heading: Fraunces serif, ink colour -->
+    <!-- Main heading: Fraunces, ink -->
     <component
       :is="tag"
       :class="[
@@ -80,7 +72,7 @@ const alignClass: Record<string, string> = {
       {{ title }}
     </component>
 
-    <!-- Subtitle: Inter, steel-toned -->
+    <!-- Subtitle: Inter, steel-toned, comfortable line-height -->
     <p
       v-if="subtitle"
       :class="[
