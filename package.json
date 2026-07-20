@@ -1,0 +1,42 @@
+{
+  "name": "instyle-creation",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "nuxt typecheck",
+    "prepare": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/fonts": "^0.14.0",
+    "@nuxt/image": "^1.10.0",
+    "@nuxtjs/i18n": "^10.4.1",
+    "@nuxtjs/seo": "^5.3.3",
+    "@tailwindcss/vite": "^4.1.11",
+    "@vueuse/core": "^13.5.0",
+    "@vueuse/motion": "^3.0.3",
+    "nuxt": "^4.0.0",
+    "tailwindcss": "^4.1.11",
+    "vue": "^3.5.17",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.7.0",
+    "@types/node": "^22.16.5",
+    "eslint": "^10.7.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3"
+  },
+  "lint-staged": {
+    "*.{ts,vue,js,mjs}": "eslint --fix",
+    "*.{ts,vue,js,mjs,json,css,md}": "prettier --write"
+  }
+}

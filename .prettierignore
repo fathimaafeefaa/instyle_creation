@@ -1,0 +1,6 @@
+# Prettier — ignore generated and vendored paths
+node_modules
+.nuxt
+.output
+dist
+pnpm-lock.yaml

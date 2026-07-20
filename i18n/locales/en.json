@@ -1,0 +1,187 @@
+{
+  "nav": {
+    "home":     "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "about":    "About",
+    "contact":  "Contact",
+    "open_menu":  "Open navigation menu",
+    "close_menu": "Close navigation menu"
+  },
+
+  "common": {
+    "read_more":     "Read more",
+    "view_all":      "View all",
+    "contact_us":    "Contact us",
+    "enquire_now":   "Enquire now",
+    "get_in_touch":  "Get in touch",
+    "learn_more":    "Learn more",
+    "start_project": "Start your project",
+    "view_work":     "View our work",
+    "back":          "Back",
+    "close":         "Close",
+    "loading":       "Loading…",
+    "send":          "Send",
+    "submit":        "Submit",
+    "required":      "Required",
+    "optional":      "Optional",
+    "aria": {
+      "external_link": "Opens in a new tab",
+      "scroll_top":    "Scroll to top"
+    }
+  },
+
+  "locale": {
+    "switch_to": "العربية",
+    "current":   "English",
+    "label":     "Change language"
+  },
+
+  "hero": {
+    "eyebrow":      "Premium Interior Design",
+    "title":        "Spaces Crafted With Purpose",
+    "subtitle":     "Award-winning interior design and fit-out solutions for residential, commercial, and hospitality projects across the UAE.",
+    "cta_primary":  "Start your project",
+    "cta_secondary": "View our work"
+  },
+
+  "services": {
+    "eyebrow":  "What We Do",
+    "title":    "Our Services",
+    "subtitle": "From concept to completion, we deliver end-to-end interior design solutions tailored to your vision.",
+    "enquire":  "Enquire about this service",
+    "items": {
+      "interior-design": {
+        "title":       "Interior Design",
+        "description": "Bespoke interior concepts that balance aesthetics, functionality, and your personal style."
+      },
+      "fit-out": {
+        "title":       "Fit-Out",
+        "description": "Expert construction and fit-out execution with attention to craftsmanship and timelines."
+      },
+      "space-planning": {
+        "title":       "Space Planning",
+        "description": "Optimised floor plans that maximise flow, light, and utility within any footprint."
+      },
+      "furniture-supply": {
+        "title":       "Furniture Supply",
+        "description": "Curated furniture and décor sourced from leading international and regional brands."
+      },
+      "lighting-design": {
+        "title":       "Lighting Design",
+        "description": "Ambient, task, and accent lighting schemes that define mood and highlight architecture."
+      },
+      "project-management": {
+        "title":       "Project Management",
+        "description": "End-to-end oversight from brief to handover — on time, on budget, no surprises."
+      }
+    }
+  },
+
+  "projects": {
+    "eyebrow":    "Our Portfolio",
+    "title":      "Featured Projects",
+    "subtitle":   "A selection of residential, commercial, and hospitality spaces we have brought to life.",
+    "view_all":   "View all projects",
+    "read_more":  "Read more about this project",
+    "categories": {
+      "all":         "All",
+      "residential": "Residential",
+      "commercial":  "Commercial",
+      "hospitality": "Hospitality",
+      "retail":      "Retail",
+      "office":      "Office"
+    },
+    "items": {
+      "villa-arabesque":    { "title": "Villa Arabesque",    "location": "Dubai, UAE" },
+      "downtown-penthouse": { "title": "Downtown Penthouse", "location": "Dubai, UAE" },
+      "grand-lobby-dubai":  { "title": "Grand Lobby Dubai",  "location": "Dubai, UAE" },
+      "boutique-hotel-abu": { "title": "Boutique Hotel",     "location": "Abu Dhabi, UAE" },
+      "flagship-store-dxb": { "title": "Flagship Store",     "location": "Dubai, UAE" },
+      "tech-campus-office": { "title": "Tech Campus Office", "location": "Abu Dhabi, UAE" }
+    }
+  },
+
+  "stats": {
+    "projects_completed": "Projects Completed",
+    "years_experience":   "Years of Experience",
+    "happy_clients":      "Happy Clients",
+    "countries_served":   "Countries Served"
+  },
+
+  "clients": {
+    "eyebrow":    "Trusted By",
+    "title":      "Clients Who Trust Us",
+    "aria_label": "Our clients"
+  },
+
+  "testimonials": {
+    "eyebrow":  "What They Say",
+    "title":    "Client Stories",
+    "subtitle": "Don't take our word for it — hear from the people we've had the privilege of working with.",
+    "prev":     "Previous testimonial",
+    "next":     "Next testimonial",
+    "of":       "of"
+  },
+
+  "cta": {
+    "eyebrow":  "Let's Work Together",
+    "title":    "Ready to Transform Your Space?",
+    "subtitle": "Let's discuss your vision. Our design team is ready to bring it to life.",
+    "button":   "Enquire now"
+  },
+
+  "contact": {
+    "eyebrow":  "Get in Touch",
+    "title":    "Contact Us",
+    "subtitle": "Fill in the form and our team will get back to you within 24 hours.",
+    "fields": {
+      "name":    "Full Name",
+      "email":   "Email Address",
+      "phone":   "Phone Number",
+      "subject": "Subject",
+      "message": "Your Message"
+    },
+    "placeholders": {
+      "name":    "e.g. Ahmed Al Mansouri",
+      "email":   "your@email.com",
+      "phone":   "+971 50 000 0000",
+      "subject": "e.g. Villa interior design",
+      "message": "Tell us about your project…"
+    },
+    "submit":  "Send message",
+    "success": "Thank you! We'll be in touch shortly.",
+    "error":   "Something went wrong. Please try again or call us directly."
+  },
+
+  "about": {
+    "eyebrow":  "Our Story",
+    "title":    "Crafting Spaces Since 2012",
+    "subtitle": "Founded in Dubai, InStyle Creation has delivered over 350 premium interior projects across the UAE and the wider region.",
+    "read_more": "Read our story"
+  },
+
+  "footer": {
+    "tagline":    "Crafting spaces that inspire.",
+    "rights":     "All rights reserved.",
+    "address_label": "Address",
+    "phone_label":   "Phone",
+    "email_label":   "Email",
+    "nav_label":     "Quick links",
+    "legal_label":   "Legal",
+    "privacy":       "Privacy Policy",
+    "terms":         "Terms of Service"
+  },
+
+  "errors": {
+    "not_found_title":    "Page not found",
+    "not_found_message":  "The page you're looking for doesn't exist or has been moved.",
+    "go_home":            "Go to homepage",
+    "validation": {
+      "required":  "This field is required",
+      "email":     "Please enter a valid email address",
+      "min_length": "Must be at least {n} characters",
+      "max_length": "Must be no more than {n} characters"
+    }
+  }
+}
