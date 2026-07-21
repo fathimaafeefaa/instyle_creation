@@ -11,6 +11,11 @@
     "contact_us": "AR: Contact us",
     "enquire_now": "AR: Enquire now"
   },
+  "hero": {
+    "title": "AR: Crafting Exceptional Spaces",
+    "subtitle": "AR: Premium interior design & fit-out solutions for residential, commercial, and hospitality projects.",
+    "cta_primary": "AR: Enquire now"
+  },
   "header": {
     "call_us": "AR: Call Us"
   },
@@ -26,9 +31,37 @@
     "copyright": "AR: © {year} Instyle Creation Technical Works LLC. All rights reserved."
   },
   "stats": {
-    "projects_completed": "AR: Projects Delivered",
-    "years_experience": "AR: Years of Experience",
-    "happy_clients": "AR: Happy Clients",
-    "countries_served": "AR: Countries Served"
+    "products": "AR: Products",
+    "projects": "AR: Projects",
+    "followers": "AR: Followers",
+    "employees": "AR: Employees"
+  },
+  "services": {
+    "eyebrow": "AR: Our Expertise",
+    "title": "AR: Services",
+    "subtitle": "AR: Discover our full range of services.",
+    "view_all": "AR: View all services",
+    "items": {
+      "interior-design": { "title": "AR: Interior Design", "description": "AR: Bespoke interior design services." },
+      "fit-out": { "title": "AR: Fit-out", "description": "AR: High-quality fit-out execution." },
+      "space-planning": { "title": "AR: Space Planning", "description": "AR: Optimal utilization of spaces." },
+      "furniture-supply": { "title": "AR: Furniture Supply", "description": "AR: Custom furniture solutions." },
+      "lighting-design": { "title": "AR: Lighting Design", "description": "AR: Atmospheric lighting design." },
+      "project-management": { "title": "AR: Project Management", "description": "AR: End-to-end project management." }
+    }
+  },
+  "clients": {
+    "eyebrow": "AR: Our Clients",
+    "title": "AR: Trusted by Industry Leaders"
+  },
+  "testimonials": {
+    "eyebrow": "AR: Testimonials",
+    "title": "AR: What Our Clients Say",
+    "placeholder_badge": "AR: Placeholder — replace with real client quote"
+  },
+  "contact_cta": {
+    "title": "AR: Ready to transform your space?",
+    "subtitle": "AR: Get in touch with us today to discuss your project.",
+    "button": "AR: Get Started"
   }
 }

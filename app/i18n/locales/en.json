@@ -11,6 +11,11 @@
     "contact_us": "Contact us",
     "enquire_now": "Enquire now"
   },
+  "hero": {
+    "title": "Crafting Exceptional Spaces",
+    "subtitle": "Premium interior design & fit-out solutions for residential, commercial, and hospitality projects.",
+    "cta_primary": "Enquire now"
+  },
   "header": {
     "call_us": "Call Us"
   },
@@ -26,9 +31,37 @@
     "copyright": "© {year} Instyle Creation Technical Works LLC. All rights reserved."
   },
   "stats": {
-    "projects_completed": "Projects Delivered",
-    "years_experience": "Years of Experience",
-    "happy_clients": "Happy Clients",
-    "countries_served": "Countries Served"
+    "products": "Products",
+    "projects": "Projects",
+    "followers": "Followers",
+    "employees": "Employees"
+  },
+  "services": {
+    "eyebrow": "Our Expertise",
+    "title": "Services",
+    "subtitle": "Discover our full range of services.",
+    "view_all": "View all services",
+    "items": {
+      "interior-design": { "title": "Interior Design", "description": "Bespoke interior design services." },
+      "fit-out": { "title": "Fit-out", "description": "High-quality fit-out execution." },
+      "space-planning": { "title": "Space Planning", "description": "Optimal utilization of spaces." },
+      "furniture-supply": { "title": "Furniture Supply", "description": "Custom furniture solutions." },
+      "lighting-design": { "title": "Lighting Design", "description": "Atmospheric lighting design." },
+      "project-management": { "title": "Project Management", "description": "End-to-end project management." }
+    }
+  },
+  "clients": {
+    "eyebrow": "Our Clients",
+    "title": "Trusted by Industry Leaders"
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "What Our Clients Say",
+    "placeholder_badge": "Placeholder — replace with real client quote"
+  },
+  "contact_cta": {
+    "title": "Ready to transform your space?",
+    "subtitle": "Get in touch with us today to discuss your project.",
+    "button": "Get Started"
   }
 }

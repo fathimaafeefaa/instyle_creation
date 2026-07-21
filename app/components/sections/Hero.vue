@@ -2,43 +2,54 @@
 /**
  * app/components/sections/Hero.vue
  *
- * Full-viewport hero section.
- * Content is driven by i18n keys — no hardcoded strings.
- * Real imagery and animations are added in a subsequent step.
+ * Full-bleed hero section with placeholder image and dark overlay.
+ * Uses v-motion for subtle reveal.
  */
 const { t } = useI18n()
+const localePath = useLocalePath()
 </script>
 
 <template>
   <section
     id="hero"
     aria-labelledby="hero-heading"
-    class="relative flex min-h-[90svh] items-center overflow-hidden bg-[--color-neutral-950]"
+    class="relative flex min-h-[90svh] items-center overflow-hidden bg-ink"
   >
-    <!-- Background image slot — NuxtImage will go here -->
+    <!-- Background image -->
     <div class="absolute inset-0 z-0" aria-hidden="true">
-      <!-- TODO: <NuxtImg> with optimised hero image -->
+      <NuxtImg
+        src="/images/hero-placeholder.jpg"
+        alt="Instyle Creation interior showcase"
+        class="h-full w-full object-cover object-center"
+        loading="eager"
+      />
     </div>
 
     <!-- Overlay -->
-    <div class="absolute inset-0 z-10 bg-gradient-to-br from-black/70 via-black/50 to-transparent" aria-hidden="true" />
+    <div class="absolute inset-0 z-10 bg-ink/70" aria-hidden="true" />
 
     <!-- Content -->
     <div class="container-pad relative z-20 mx-auto max-w-7xl">
-      <div class="max-w-3xl space-y-6">
-        <UiSectionHeading
-          id="hero-heading"
-          :eyebrow="t('hero.eyebrow')"
-          :title="t('hero.title')"
-          :subtitle="t('hero.subtitle')"
-        />
+      <div 
+        class="max-w-3xl space-y-6"
+        v-motion="{
+          initial: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0, transition: { duration: 300 } }
+        }"
+      >
+        <h1 
+          id="hero-heading" 
+          class="font-heading text-5xl leading-tight text-white md:text-6xl lg:text-7xl"
+        >
+          {{ t('hero.title') }}
+        </h1>
+        <p class="text-lg text-white/80 md:text-xl">
+          {{ t('hero.subtitle') }}
+        </p>
 
-        <div class="flex flex-wrap gap-4">
+        <div class="pt-4">
           <UiButton size="lg" as="NuxtLink" :to="localePath('/contact')">
             {{ t('hero.cta_primary') }}
-          </UiButton>
-          <UiButton size="lg" variant="outline" as="NuxtLink" :to="localePath('/projects')">
-            {{ t('hero.cta_secondary') }}
           </UiButton>
         </div>
       </div>

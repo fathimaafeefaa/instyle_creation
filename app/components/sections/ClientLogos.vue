@@ -2,8 +2,8 @@
 /**
  * app/components/sections/ClientLogos.vue
  *
- * Horizontal scroll-able logo strip.
- * Client data comes from app/data/clients.ts — single source of truth.
+ * Strip of client logos.
+ * Uses placeholder image paths named by client slug.
  */
 import { clients } from '~/data/clients'
 
@@ -14,31 +14,38 @@ const { t } = useI18n()
   <section
     id="clients"
     aria-labelledby="clients-heading"
-    class="section-py bg-[--color-surface-muted]"
+    class="section-py bg-white"
   >
-    <div class="container-pad mx-auto max-w-7xl space-y-10">
+    <div class="container-pad mx-auto max-w-7xl space-y-12">
       <UiSectionHeading
         id="clients-heading"
         :eyebrow="t('clients.eyebrow')"
         :title="t('clients.title')"
         align="center"
+        v-motion="{
+          initial: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0, transition: { duration: 300 } }
+        }"
       />
 
-      <!-- Logo grid — NuxtImage logos added in next step -->
-      <div
-        class="flex flex-wrap items-center justify-center gap-8 md:gap-12"
-        role="list"
-        :aria-label="t('clients.aria_label')"
+      <div 
+        class="flex flex-wrap items-center justify-center gap-8 md:gap-16"
+        v-motion="{
+          initial: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0, transition: { duration: 300, delay: 100 } }
+        }"
       >
         <div
           v-for="client in clients"
           :key="client.id"
-          role="listitem"
-          class="flex h-10 w-32 items-center justify-center grayscale transition-all duration-300 hover:grayscale-0 hover:opacity-100 opacity-60"
-          :title="client.name"
+          class="flex items-center justify-center opacity-60 grayscale transition-all hover:opacity-100 hover:grayscale-0"
         >
-          <!-- TODO: <NuxtImg :src="client.logo" :alt="client.name" /> -->
-          <span class="text-sm font-semibold text-[--color-text-muted]">{{ client.name }}</span>
+          <NuxtImg
+            :src="`/images/clients/${client.id}.png`"
+            :alt="`${client.name} logo`"
+            class="h-12 w-auto max-w-[120px] object-contain"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>

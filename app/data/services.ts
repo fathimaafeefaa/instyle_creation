@@ -11,11 +11,6 @@ export interface Service {
   /** i18n key: services.items.<id>.title / .description */
 }
 
-export interface Stat {
-  id: string
-  value: string
-  /** i18n key: stats.<id> */
-}
 
 export const services: Service[] = [
   { id: 'interior-design',    icon: '🏛️' },
@@ -24,11 +19,4 @@ export const services: Service[] = [
   { id: 'furniture-supply',   icon: '🪑' },
   { id: 'lighting-design',    icon: '💡' },
   { id: 'project-management', icon: '📋' },
-]
-
-export const stats: Stat[] = [
-  { id: 'projects_completed', value: '350+' },
-  { id: 'years_experience',   value: '12+'  },
-  { id: 'happy_clients',      value: '200+' },
-  { id: 'countries_served',   value: '5'    },
 ]

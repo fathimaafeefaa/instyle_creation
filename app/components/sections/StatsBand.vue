@@ -3,9 +3,9 @@
  * app/components/sections/StatsBand.vue
  *
  * A horizontal band of key statistics / social proof numbers.
- * Numbers come from app/data/services.ts (stats export) to keep a single source of truth.
+ * Numbers come from app/data/stats.ts to keep a single source of truth.
  */
-import { stats } from '~/data/services'
+import { stats } from '~/data/stats'
 
 const { t } = useI18n()
 </script>
@@ -16,7 +16,13 @@ const { t } = useI18n()
     aria-label="Company statistics"
     class="section-py bg-[--color-brand-950] text-white"
   >
-    <div class="container-pad mx-auto max-w-7xl">
+    <div
+      class="container-pad mx-auto max-w-7xl"
+      v-motion="{
+        initial: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 300 } }
+      }"
+    >
       <dl class="grid grid-cols-2 gap-8 md:grid-cols-4">
         <div
           v-for="stat in stats"

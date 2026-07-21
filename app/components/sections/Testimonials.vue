@@ -2,90 +2,80 @@
 /**
  * app/components/sections/Testimonials.vue
  *
- * Testimonial carousel / grid.
- * Data comes from app/data/testimonials.ts — single source of truth.
- * @vueuse/core's useSwipe can be wired in for touch carousel (future step).
+ * Testimonials slider or grid.
+ * Renders a placeholder warning badge so stakeholders don't mistake
+ * lorem/placeholder text for live client quotes during review.
  */
 import { testimonials } from '~/data/testimonials'
 
 const { t } = useI18n()
-
-// Simple active index for a step-through carousel (desktop shows grid)
-const activeIndex = ref(0)
-const next = () => activeIndex.value = (activeIndex.value + 1) % testimonials.length
-const prev = () => activeIndex.value = (activeIndex.value - 1 + testimonials.length) % testimonials.length
 </script>
 
 <template>
   <section
     id="testimonials"
     aria-labelledby="testimonials-heading"
-    class="section-py bg-[--color-surface]"
+    class="section-py bg-stone"
   >
     <div class="container-pad mx-auto max-w-7xl space-y-12">
       <UiSectionHeading
         id="testimonials-heading"
         :eyebrow="t('testimonials.eyebrow')"
         :title="t('testimonials.title')"
-        :subtitle="t('testimonials.subtitle')"
         align="center"
+        v-motion="{
+          initial: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0, transition: { duration: 300 } }
+        }"
       />
 
-      <!-- Grid (md+) -->
-      <div class="hidden gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         <UiCard
-          v-for="testimonial in testimonials"
+          v-for="(testimonial, index) in testimonials"
           :key="testimonial.id"
           padding="lg"
-          hover
+          class="relative flex flex-col justify-between"
+          v-motion="{
+            initial: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0, transition: { duration: 300, delay: index * 50 } }
+          }"
         >
-          <!-- Stars -->
-          <div class="mb-4 flex gap-1 text-[--color-brand-400]" aria-hidden="true">
-            <span v-for="i in 5" :key="i">★</span>
+          <div class="space-y-6">
+            <!-- Warning badge -->
+            <UiBadge variant="warning" class="inline-block text-[10px] uppercase tracking-wider mb-2">
+              {{ t('testimonials.placeholder_badge') }}
+            </UiBadge>
+
+            <!-- Rating stars -->
+            <div class="flex gap-1 text-amber">
+              <svg v-for="i in 5" :key="i" class="size-4" :class="i <= testimonial.rating ? 'fill-current' : 'text-gray-300 fill-current'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+
+            <!-- Quote -->
+            <blockquote class="text-base italic leading-relaxed text-ink/80">
+              "{{ testimonial.quote }}"
+            </blockquote>
           </div>
 
-          <blockquote class="mb-6 text-sm leading-relaxed text-[--color-text-muted] italic">
-            "{{ testimonial.quote }}"
-          </blockquote>
-
-          <footer class="flex items-center gap-3">
-            <!-- TODO: <NuxtImg :src="testimonial.avatar" :alt="testimonial.author" /> -->
-            <div class="size-10 rounded-full bg-[--color-brand-100] flex items-center justify-center text-[--color-brand-700] font-semibold text-sm">
-              {{ testimonial.author[0] }}
+          <!-- Author details -->
+          <div class="mt-8 flex items-center gap-4">
+            <div class="size-12 overflow-hidden rounded-full bg-steel/20 shrink-0">
+              <NuxtImg
+                v-if="testimonial.avatar"
+                :src="testimonial.avatar"
+                :alt="testimonial.author"
+                class="size-full object-cover"
+                loading="lazy"
+              />
             </div>
             <div>
-              <p class="text-sm font-semibold text-[--color-text]">{{ testimonial.author }}</p>
-              <p class="text-xs text-[--color-text-muted]">{{ testimonial.role }}, {{ testimonial.company }}</p>
+              <div class="font-semibold text-ink">{{ testimonial.author }}</div>
+              <div class="text-xs text-steel">{{ testimonial.role }}, {{ testimonial.company }}</div>
             </div>
-          </footer>
-        </UiCard>
-      </div>
-
-      <!-- Mobile carousel -->
-      <div class="md:hidden space-y-4">
-        <UiCard padding="lg">
-          <div class="mb-4 flex gap-1 text-[--color-brand-400]" aria-hidden="true">
-            <span v-for="i in 5" :key="i">★</span>
           </div>
-          <blockquote class="mb-6 text-sm leading-relaxed text-[--color-text-muted] italic">
-            "{{ testimonials[activeIndex]?.quote }}"
-          </blockquote>
-          <footer class="flex items-center gap-3">
-            <div class="size-10 rounded-full bg-[--color-brand-100] flex items-center justify-center text-[--color-brand-700] font-semibold text-sm">
-              {{ testimonials[activeIndex]?.author[0] }}
-            </div>
-            <div>
-              <p class="text-sm font-semibold">{{ testimonials[activeIndex]?.author }}</p>
-              <p class="text-xs text-[--color-text-muted]">{{ testimonials[activeIndex]?.role }}, {{ testimonials[activeIndex]?.company }}</p>
-            </div>
-          </footer>
         </UiCard>
-
-        <div class="flex items-center justify-center gap-4">
-          <UiButton variant="ghost" size="sm" :aria-label="t('testimonials.prev')" @click="prev">‹</UiButton>
-          <span class="text-sm text-[--color-text-muted]">{{ activeIndex + 1 }} / {{ testimonials.length }}</span>
-          <UiButton variant="ghost" size="sm" :aria-label="t('testimonials.next')" @click="next">›</UiButton>
-        </div>
       </div>
     </div>
   </section>
