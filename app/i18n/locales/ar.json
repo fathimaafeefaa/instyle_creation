@@ -63,5 +63,23 @@
     "title": "AR: Ready to transform your space?",
     "subtitle": "AR: Get in touch with us today to discuss your project.",
     "button": "AR: Get Started"
+  },
+  "about": {
+    "hero": {
+      "title": "AR: About Us",
+      "subtitle": "AR: A legacy of craftsmanship and design excellence across the UAE."
+    },
+    "intro": {
+      "title": "AR: Who We Are",
+      "text": "AR: Instyle Creation is a team of passionate designers, master craftsmen, and project managers. With over 20 years of legacy in the industry, we bring visions to life. Based in Dubai with a strong presence in Cochin and Calicut, we bridge local expertise with global design standards."
+    },
+    "story": {
+      "title": "AR: Our Story",
+      "placeholder": "AR: TODO: replace with real founding story."
+    },
+    "vision": {
+      "title": "AR: Our Vision",
+      "placeholder": "AR: TODO: replace with real vision statement."
+    }
   }
 }
