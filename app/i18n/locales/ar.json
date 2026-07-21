@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "home": "AR: Home",
+    "about": "AR: About",
+    "services": "AR: Services",
+    "projects": "AR: Projects",
+    "contact": "AR: Contact"
+  },
+  "cta": {
+    "read_more": "AR: Read more",
+    "contact_us": "AR: Contact us",
+    "enquire_now": "AR: Enquire now"
+  },
+  "header": {
+    "call_us": "AR: Call Us"
+  },
+  "footer": {
+    "tagline": "AR: Premium interior design & fit-out solutions across the UAE.",
+    "address_line1": "AR: Unit 504, Al Attar Business Center",
+    "address_line2": "AR: Sheikh Zayed Road, Al Barsha 1",
+    "address_city": "AR: Dubai, UAE",
+    "whatsapp": "AR: WhatsApp",
+    "other_locations": "AR: Other locations: Cochin, Calicut",
+    "quick_links": "AR: Quick Links",
+    "follow_us": "AR: Follow Us",
+    "copyright": "AR: © {year} Instyle Creation Technical Works LLC. All rights reserved."
+  },
+  "stats": {
+    "projects_completed": "AR: Projects Delivered",
+    "years_experience": "AR: Years of Experience",
+    "happy_clients": "AR: Happy Clients",
+    "countries_served": "AR: Countries Served"
+  }
+}
