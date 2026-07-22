@@ -42,12 +42,26 @@
     "subtitle": "AR: Discover our full range of services.",
     "view_all": "AR: View all services",
     "items": {
-      "interior-design": { "title": "AR: Interior Design", "description": "AR: Bespoke interior design services." },
-      "fit-out": { "title": "AR: Fit-out", "description": "AR: High-quality fit-out execution." },
-      "space-planning": { "title": "AR: Space Planning", "description": "AR: Optimal utilization of spaces." },
-      "furniture-supply": { "title": "AR: Furniture Supply", "description": "AR: Custom furniture solutions." },
-      "lighting-design": { "title": "AR: Lighting Design", "description": "AR: Atmospheric lighting design." },
-      "project-management": { "title": "AR: Project Management", "description": "AR: End-to-end project management." }
+      "customized-curtains-upholstery": { "title": "AR: Customized Curtains & Upholstery", "description": "AR: Bespoke drapery and premium fabric upholstery tailored to your space." },
+      "blinds": { "title": "AR: Blinds", "description": "AR: Modern roller, vertical, and venetian blinds for precise light control." },
+      "carpets": { "title": "AR: Carpets", "description": "AR: Luxurious wall-to-wall carpeting and custom rugs for ultimate comfort." },
+      "wallpapers": { "title": "AR: Wallpapers", "description": "AR: Premium designer wallcoverings and custom murals to transform walls." },
+      "motorized-curtains": { "title": "AR: Motorized Curtains", "description": "AR: Smart, automated window treatments integrated with home automation." },
+      "decor-products": { "title": "AR: Decor Products", "description": "AR: Curated styling accessories, mirrors, and art pieces to elevate interiors." },
+      "bedroom-furnishing": { "title": "AR: Bedroom Furnishing", "description": "AR: Tailored beds, wardrobes, and decor for a serene personal sanctuary." },
+      "living-space": { "title": "AR: Living Space", "description": "AR: Custom furniture layouts and style concepts for modern living rooms." },
+      "commercial-space": { "title": "AR: Commercial Space", "description": "AR: Functional, high-impact retail and hospitality design solutions." },
+      "office-interior": { "title": "AR: Office Interior", "description": "AR: Ergonomic and collaborative workspace designs optimized for productivity." },
+      "false-ceilings": { "title": "AR: False Ceilings", "description": "AR: Elegant gypsum board and modular ceiling designs with integrated lighting." },
+      "light-partitions": { "title": "AR: Light Partitions", "description": "AR: Durable drywall and glass partitioning to divide spaces efficiently." },
+      "glass-aluminium-works": { "title": "AR: Glass & Aluminium Works", "description": "AR: Precision aluminium framing and glass partition systems." },
+      "plumbing-sanitary": { "title": "AR: Plumbing & Sanitary", "description": "AR: Expert plumbing installations and modern sanitary ware fitting." },
+      "painting": { "title": "AR: Painting", "description": "AR: Premium interior and exterior paint finishes and custom textures." },
+      "carpentry-flooring": { "title": "AR: Carpentry & Flooring", "description": "AR: Bespoke wood joinery, custom cabinetry, and hardwood flooring." },
+      "metal-parts-erection": { "title": "AR: Metal Parts Erection", "description": "AR: Structural metal fabrication and ornamental ironwork installations." },
+      "steel-products": { "title": "AR: Steel Products", "description": "AR: High-durability structural steel fabrications, railings, and fixtures." },
+      "plastering": { "title": "AR: Plastering", "description": "AR: High-quality plaster skimming and rendering for smooth, durable walls." },
+      "insulation-technical-works": { "title": "AR: Insulation & Other Technical Works", "description": "AR: Thermal, acoustic insulation and comprehensive technical repairs." }
     }
   },
   "clients": {
@@ -59,10 +73,29 @@
     "title": "AR: What Our Clients Say",
     "placeholder_badge": "AR: Placeholder — replace with real client quote"
   },
+  "projects": {
+    "title": "AR: Our Portfolio",
+    "subtitle": "AR: Discover our curated collection of luxury residential and commercial spaces."
+  },
   "contact_cta": {
     "title": "AR: Ready to transform your space?",
     "subtitle": "AR: Get in touch with us today to discuss your project.",
     "button": "AR: Get Started"
+  },
+  "contact": {
+    "title": "AR: Contact Us",
+    "subtitle": "AR: Get in touch with our team in Dubai to discuss your design & fit-out needs.",
+    "form_card_title": "AR: Send a Message",
+    "form_name": "AR: Full Name",
+    "form_email": "AR: Email Address",
+    "form_phone": "AR: Phone Number (Optional)",
+    "form_message": "AR: Message",
+    "form_submit": "AR: Submit Enquiry",
+    "info_title": "AR: Contact Information",
+    "info_address": "AR: Our Office",
+    "info_phone": "AR: Call Us",
+    "info_whatsapp": "AR: WhatsApp Chat",
+    "info_email": "AR: Email Us"
   },
   "about": {
     "hero": {

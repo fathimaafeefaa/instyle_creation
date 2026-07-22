@@ -42,12 +42,26 @@
     "subtitle": "Discover our full range of services.",
     "view_all": "View all services",
     "items": {
-      "interior-design": { "title": "Interior Design", "description": "Bespoke interior design services." },
-      "fit-out": { "title": "Fit-out", "description": "High-quality fit-out execution." },
-      "space-planning": { "title": "Space Planning", "description": "Optimal utilization of spaces." },
-      "furniture-supply": { "title": "Furniture Supply", "description": "Custom furniture solutions." },
-      "lighting-design": { "title": "Lighting Design", "description": "Atmospheric lighting design." },
-      "project-management": { "title": "Project Management", "description": "End-to-end project management." }
+      "customized-curtains-upholstery": { "title": "Customized Curtains & Upholstery", "description": "Bespoke drapery and premium fabric upholstery tailored to your space." },
+      "blinds": { "title": "Blinds", "description": "Modern roller, vertical, and venetian blinds for precise light control." },
+      "carpets": { "title": "Carpets", "description": "Luxurious wall-to-wall carpeting and custom rugs for ultimate comfort." },
+      "wallpapers": { "title": "Wallpapers", "description": "Premium designer wallcoverings and custom murals to transform walls." },
+      "motorized-curtains": { "title": "Motorized Curtains", "description": "Smart, automated window treatments integrated with home automation." },
+      "decor-products": { "title": "Decor Products", "description": "Curated styling accessories, mirrors, and art pieces to elevate interiors." },
+      "bedroom-furnishing": { "title": "Bedroom Furnishing", "description": "Tailored beds, wardrobes, and decor for a serene personal sanctuary." },
+      "living-space": { "title": "Living Space", "description": "Custom furniture layouts and style concepts for modern living rooms." },
+      "commercial-space": { "title": "Commercial Space", "description": "Functional, high-impact retail and hospitality design solutions." },
+      "office-interior": { "title": "Office Interior", "description": "Ergonomic and collaborative workspace designs optimized for productivity." },
+      "false-ceilings": { "title": "False Ceilings", "description": "Elegant gypsum board and modular ceiling designs with integrated lighting." },
+      "light-partitions": { "title": "Light Partitions", "description": "Durable drywall and glass partitioning to divide spaces efficiently." },
+      "glass-aluminium-works": { "title": "Glass & Aluminium Works", "description": "Precision aluminium framing and glass partition systems." },
+      "plumbing-sanitary": { "title": "Plumbing & Sanitary", "description": "Expert plumbing installations and modern sanitary ware fitting." },
+      "painting": { "title": "Painting", "description": "Premium interior and exterior paint finishes and custom textures." },
+      "carpentry-flooring": { "title": "Carpentry & Flooring", "description": "Bespoke wood joinery, custom cabinetry, and hardwood flooring." },
+      "metal-parts-erection": { "title": "Metal Parts Erection", "description": "Structural metal fabrication and ornamental ironwork installations." },
+      "steel-products": { "title": "Steel Products", "description": "High-durability structural steel fabrications, railings, and fixtures." },
+      "plastering": { "title": "Plastering", "description": "High-quality plaster skimming and rendering for smooth, durable walls." },
+      "insulation-technical-works": { "title": "Insulation & Other Technical Works", "description": "Thermal, acoustic insulation and comprehensive technical repairs." }
     }
   },
   "clients": {
@@ -59,10 +73,29 @@
     "title": "What Our Clients Say",
     "placeholder_badge": "Placeholder — replace with real client quote"
   },
+  "projects": {
+    "title": "Our Portfolio",
+    "subtitle": "Discover our curated collection of luxury residential and commercial spaces."
+  },
   "contact_cta": {
     "title": "Ready to transform your space?",
     "subtitle": "Get in touch with us today to discuss your project.",
     "button": "Get Started"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team in Dubai to discuss your design & fit-out needs.",
+    "form_card_title": "Send a Message",
+    "form_name": "Full Name",
+    "form_email": "Email Address",
+    "form_phone": "Phone Number (Optional)",
+    "form_message": "Message",
+    "form_submit": "Submit Enquiry",
+    "info_title": "Contact Information",
+    "info_address": "Our Office",
+    "info_phone": "Call Us",
+    "info_whatsapp": "WhatsApp Chat",
+    "info_email": "Email Us"
   },
   "about": {
     "hero": {
