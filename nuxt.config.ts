@@ -88,10 +88,15 @@ export default defineNuxtConfig({
     indexable: true,
   },
 
+  schemaOrg: {
+    enabled: false,
+  },
+
   /**
    * @nuxtjs/i18n — en (default) + ar (RTL)
    */
   i18n: {
+    baseUrl: 'https://instyle-creation.com',
     locales: [
       {
         code: 'en',
@@ -144,6 +149,23 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
+    },
+  },
+
+  /**
+   * Build transpile configuration to fix ESM interop issues during prerendering.
+   */
+  build: {
+    transpile: ['@vueuse/motion', 'tslib'],
+  },
+
+  alias: {
+    tslib: 'tslib/tslib.es6.js',
+  },
+
+  nitro: {
+    externals: {
+      inline: ['@vueuse/motion', 'tslib'],
     },
   },
 

@@ -31,11 +31,11 @@ const localePath = useLocalePath()
     <!-- Content -->
     <div class="container-pad relative z-20 mx-auto max-w-7xl">
       <div 
-        class="max-w-3xl space-y-6"
         v-motion="{
           initial: { opacity: 0, y: 20 },
           visible: { opacity: 1, y: 0, transition: { duration: 300 } }
         }"
+        class="max-w-3xl space-y-6"
       >
         <h1 
           id="hero-heading" 

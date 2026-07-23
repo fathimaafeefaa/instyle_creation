@@ -44,8 +44,11 @@ export function useContactForm() {
   const errorMessage = ref<string>('')
 
   function validate(): boolean {
-    // Clear previous errors
-    Object.keys(errors).forEach((k) => delete (errors as Record<string, unknown>)[k])
+    errors.name = undefined
+    errors.email = undefined
+    errors.phone = undefined
+    errors.subject = undefined
+    errors.message = undefined
 
     if (!form.name.trim()) errors.name = 'Name is required'
     if (!form.email.trim()) {
@@ -81,7 +84,11 @@ export function useContactForm() {
 
   function reset() {
     Object.assign(form, { name: '', email: '', phone: '', subject: '', message: '' })
-    Object.keys(errors).forEach((k) => delete (errors as Record<string, unknown>)[k])
+    errors.name = undefined
+    errors.email = undefined
+    errors.phone = undefined
+    errors.subject = undefined
+    errors.message = undefined
     status.value = 'idle'
     errorMessage.value = ''
   }

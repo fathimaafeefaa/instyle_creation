@@ -80,8 +80,9 @@ const handleSubmit = async () => {
       submitSuccess.value = response.message
       form.value = { name: '', email: '', phone: '', message: '' }
     }
-  } catch (error: any) {
-    submitError.value = error.statusMessage || error.message || 'An error occurred. Please try again.'
+  } catch (error: unknown) {
+    const err = error as { statusMessage?: string; message?: string }
+    submitError.value = err.statusMessage || err.message || 'An error occurred. Please try again.'
   } finally {
     isSubmitting.value = false
   }
@@ -93,11 +94,11 @@ const handleSubmit = async () => {
     <!-- Hero Header -->
     <section class="bg-ink py-20 text-center text-white md:py-32">
       <div 
-        class="container-pad mx-auto max-w-4xl space-y-6"
         v-motion="{
           initial: { opacity: 0, y: 20 },
           visible: { opacity: 1, y: 0, transition: { duration: 300 } }
         }"
+        class="container-pad mx-auto max-w-4xl space-y-6"
       >
         <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl">
           {{ t('contact.title') }}
@@ -127,8 +128,8 @@ const handleSubmit = async () => {
                     {{ t('contact.info_address') }}
                   </h3>
                   <p class="text-sm text-ink leading-relaxed">
-                    Unit 504, Al Attar Business Center<br />
-                    Sheikh Zayed Road, Al Barsha 1<br />
+                    Unit 504, Al Attar Business Center<br >
+                    Sheikh Zayed Road, Al Barsha 1<br >
                     Dubai, UAE
                   </p>
                 </div>
@@ -174,7 +175,7 @@ const handleSubmit = async () => {
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
                 class="rounded-lg"
-              ></iframe>
+              />
             </div>
           </div>
 
@@ -184,7 +185,7 @@ const handleSubmit = async () => {
               {{ t('contact.form_card_title') }}
             </h2>
 
-            <form @submit.prevent="handleSubmit" class="space-y-5">
+            <form class="space-y-5" @submit.prevent="handleSubmit">
               <!-- Name -->
               <div>
                 <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-steel mb-2">
@@ -196,7 +197,7 @@ const handleSubmit = async () => {
                   type="text"
                   class="w-full rounded-md border border-[--color-border] bg-surface px-4 py-3 text-sm text-ink transition-all focus:border-amber focus:ring-1 focus:ring-amber focus:outline-hidden"
                   :class="{ 'border-red-500': errors.name }"
-                />
+                >
                 <span v-if="errors.name" class="mt-1 block text-xs text-red-500">{{ errors.name }}</span>
               </div>
 
@@ -211,7 +212,7 @@ const handleSubmit = async () => {
                   type="email"
                   class="w-full rounded-md border border-[--color-border] bg-surface px-4 py-3 text-sm text-ink transition-all focus:border-amber focus:ring-1 focus:ring-amber focus:outline-hidden"
                   :class="{ 'border-red-500': errors.email }"
-                />
+                >
                 <span v-if="errors.email" class="mt-1 block text-xs text-red-500">{{ errors.email }}</span>
               </div>
 
@@ -225,7 +226,7 @@ const handleSubmit = async () => {
                   v-model="form.phone"
                   type="tel"
                   class="w-full rounded-md border border-[--color-border] bg-surface px-4 py-3 text-sm text-ink transition-all focus:border-amber focus:ring-1 focus:ring-amber focus:outline-hidden"
-                />
+                >
               </div>
 
               <!-- Message -->
@@ -239,7 +240,7 @@ const handleSubmit = async () => {
                   rows="4"
                   class="w-full rounded-md border border-[--color-border] bg-surface px-4 py-3 text-sm text-ink transition-all focus:border-amber focus:ring-1 focus:ring-amber focus:outline-hidden resize-none"
                   :class="{ 'border-red-500': errors.message }"
-                ></textarea>
+                />
                 <span v-if="errors.message" class="mt-1 block text-xs text-red-500">{{ errors.message }}</span>
               </div>
 

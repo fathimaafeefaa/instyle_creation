@@ -5,11 +5,7 @@
  * Components import from here — never hardcode content inline.
  */
 
-export interface Service {
-  id: string
-  icon: string // emoji icon; swap for SVG import when assets are ready
-  /** i18n key: services.items.<id>.title / .description */
-}
+import type { Service } from '~/types'
 
 
 export const services: Service[] = [

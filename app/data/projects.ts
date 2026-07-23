@@ -5,17 +5,7 @@
  * Images will be added as NuxtImg src values in a subsequent step.
  */
 
-export interface Project {
-  id: string
-  // PLACEHOLDER: Must be replaced with the actual case study title before launch
-  title: string
-  // PLACEHOLDER: Must be replaced with the actual category (e.g., Residential, Commercial) before launch
-  category: string
-  // PLACEHOLDER: Must be replaced with a real project description before launch
-  description: string
-  // PLACEHOLDER: Must be replaced with the actual image path once assets are ready
-  image: string
-}
+import type { Project } from '~/types'
 
 export const projects: Project[] = [
   {

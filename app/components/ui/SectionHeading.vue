@@ -30,8 +30,8 @@ interface Props {
 
 const {
   title,
-  eyebrow,
-  subtitle,
+  eyebrow = '',
+  subtitle = '',
   align = 'start',
   level = 2,
   dark = false,

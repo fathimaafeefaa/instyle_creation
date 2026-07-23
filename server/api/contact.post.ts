@@ -65,11 +65,12 @@ export default defineEventHandler(async (event) => {
     }
 
     return { ok: true, message: 'Message received. We will be in touch shortly.' }
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error('[Contact API] Exception:', err)
+    const errorObject = err as { statusCode?: number; statusMessage?: string; message?: string }
     throw createError({ 
-      statusCode: err.statusCode || 500, 
-      statusMessage: err.statusMessage || err.message || 'Internal Server Error' 
+      statusCode: errorObject.statusCode || 500, 
+      statusMessage: errorObject.statusMessage || errorObject.message || 'Internal Server Error' 
     })
   }
 })

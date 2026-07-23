@@ -24,11 +24,11 @@ useSeo({
     <!-- ── Page Hero ──────────────────────────────────────────────────────── -->
     <section class="bg-ink py-20 text-center text-white md:py-32">
       <div 
-        class="container-pad mx-auto max-w-4xl space-y-6"
         v-motion="{
           initial: { opacity: 0, y: 20 },
           visible: { opacity: 1, y: 0, transition: { duration: 300 } }
         }"
+        class="container-pad mx-auto max-w-4xl space-y-6"
       >
         <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl">
           {{ t('about.hero.title') }}

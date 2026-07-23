@@ -19,21 +19,21 @@ const { t } = useI18n()
     <div class="container-pad mx-auto max-w-7xl space-y-12">
       <UiSectionHeading
         id="clients-heading"
-        :eyebrow="t('clients.eyebrow')"
-        :title="t('clients.title')"
-        align="center"
         v-motion="{
           initial: { opacity: 0, y: 20 },
           visible: { opacity: 1, y: 0, transition: { duration: 300 } }
         }"
+        :eyebrow="t('clients.eyebrow')"
+        :title="t('clients.title')"
+        align="center"
       />
 
       <div 
-        class="flex flex-wrap items-center justify-center gap-8 md:gap-16"
         v-motion="{
           initial: { opacity: 0, y: 20 },
           visible: { opacity: 1, y: 0, transition: { duration: 300, delay: 100 } }
         }"
+        class="flex flex-wrap items-center justify-center gap-8 md:gap-16"
       >
         <div
           v-for="client in clients"

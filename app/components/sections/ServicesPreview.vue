@@ -21,11 +21,11 @@ const featuredServices = computed(() => services.slice(0, 6))
   >
     <div class="container-pad mx-auto max-w-7xl space-y-12">
       <div 
-        class="flex flex-col md:flex-row md:items-end md:justify-between gap-6"
         v-motion="{
           initial: { opacity: 0, y: 20 },
           visible: { opacity: 1, y: 0, transition: { duration: 300 } }
         }"
+        class="flex flex-col md:flex-row md:items-end md:justify-between gap-6"
       >
         <UiSectionHeading
           id="services-heading"
@@ -42,12 +42,12 @@ const featuredServices = computed(() => services.slice(0, 6))
         <UiCard
           v-for="(service, index) in featuredServices"
           :key="service.id"
-          hover
-          padding="lg"
           v-motion="{
             initial: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0, transition: { duration: 300, delay: index * 50 } }
           }"
+          hover
+          padding="lg"
         >
           <!-- Icon placeholder -->
           <div class="mb-4 flex size-12 items-center justify-center rounded-xl bg-stone text-amber">

@@ -8,6 +8,11 @@
 import { computed } from 'vue'
 
 const { locale, locales } = useI18n()
+const localeHead = useLocaleHead({
+  addDirAttribute: true,
+  identifierAttribute: 'id',
+  addSeoAttributes: true,
+})
 
 const currentLocale = computed(() =>
   locales.value.find((l) => l.code === locale.value),
@@ -21,6 +26,13 @@ useHead({
     lang,
     dir,
   },
+  link: [
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    ...(localeHead.value.link || []),
+  ],
+  meta: [
+    ...(localeHead.value.meta || []),
+  ],
 })
 </script>
 

@@ -28,7 +28,7 @@ const localePath = useLocalePath()
               class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
               onerror="this.src='https://placehold.co/600x450/F6F4F0/9C9C94?text=Project+TBD'"
-            />
+            >
             <!-- Category Badge overlay -->
             <span class="absolute top-4 left-4 rounded-sm bg-ink/80 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-xs">
               {{ project.category }}

@@ -5,16 +5,7 @@
  * Quotes are stored in English here; Arabic translations go into ar.json.
  */
 
-export interface Testimonial {
-  id: string
-  author: string
-  role: string
-  company: string
-  quote: string
-  /** Path to avatar image — add after assets are supplied */
-  avatar?: string
-  rating: 1 | 2 | 3 | 4 | 5
-}
+import type { Testimonial } from '~/types'
 
 export const testimonials: Testimonial[] = [
   {

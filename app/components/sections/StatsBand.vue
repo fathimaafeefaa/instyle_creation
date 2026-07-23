@@ -17,11 +17,11 @@ const { t } = useI18n()
     class="section-py bg-[--color-brand-950] text-white"
   >
     <div
-      class="container-pad mx-auto max-w-7xl"
       v-motion="{
         initial: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0, transition: { duration: 300 } }
       }"
+      class="container-pad mx-auto max-w-7xl"
     >
       <dl class="grid grid-cols-2 gap-8 md:grid-cols-4">
         <div

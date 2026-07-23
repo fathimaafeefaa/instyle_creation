@@ -6,6 +6,12 @@
  */
 import { services } from '~/data/services'
 
+interface Props {
+  hideHeading?: boolean
+}
+
+const { hideHeading = false } = defineProps<Props>()
+
 const { t } = useI18n()
 const localePath = useLocalePath()
 </script>
@@ -18,6 +24,7 @@ const localePath = useLocalePath()
   >
     <div class="container-pad mx-auto max-w-7xl space-y-12">
       <UiSectionHeading
+        v-if="!hideHeading"
         id="services-heading"
         :eyebrow="t('services.eyebrow')"
         :title="t('services.title')"
@@ -41,7 +48,7 @@ const localePath = useLocalePath()
               class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
               onerror="this.src='https://placehold.co/600x400/F6F4F0/9C9C94?text=InStyle+Creation'"
-            />
+            >
             <div class="absolute top-3 right-3 flex size-9 items-center justify-center rounded-xl bg-white/95 shadow-sm backdrop-blur-xs text-lg select-none">
               {{ service.icon }}
             </div>

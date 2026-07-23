@@ -20,25 +20,25 @@ const { t } = useI18n()
     <div class="container-pad mx-auto max-w-7xl space-y-12">
       <UiSectionHeading
         id="testimonials-heading"
-        :eyebrow="t('testimonials.eyebrow')"
-        :title="t('testimonials.title')"
-        align="center"
         v-motion="{
           initial: { opacity: 0, y: 20 },
           visible: { opacity: 1, y: 0, transition: { duration: 300 } }
         }"
+        :eyebrow="t('testimonials.eyebrow')"
+        :title="t('testimonials.title')"
+        align="center"
       />
 
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         <UiCard
           v-for="(testimonial, index) in testimonials"
           :key="testimonial.id"
-          padding="lg"
-          class="relative flex flex-col justify-between"
           v-motion="{
             initial: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0, transition: { duration: 300, delay: index * 50 } }
           }"
+          padding="lg"
+          class="relative flex flex-col justify-between"
         >
           <div class="space-y-6">
             <!-- Warning badge -->

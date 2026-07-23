@@ -18,7 +18,7 @@
 const SITE_NAME = 'Instyle Creation'
 const DEFAULT_DESCRIPTION =
   'Premium interior design & fit-out solutions for residential, commercial, and hospitality projects across the UAE.'
-const DEFAULT_OG_IMAGE = '/og/default.jpg'
+const DEFAULT_OG_IMAGE = '/images/og-placeholder.jpg'
 
 export interface SeoOptions {
   /** Page-specific title — template "%s | Instyle Creation" is applied automatically. */
@@ -43,17 +43,15 @@ export function useSeo(options: SeoOptions = {}) {
     jsonLd,
   } = options
 
-  const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME
-
   useSeoMeta({
-    title: fullTitle,
+    title,
     description,
-    ogTitle: fullTitle,
+    ogTitle: title,
     ogDescription: description,
     ogImage,
     ogSiteName: SITE_NAME,
     twitterCard: 'summary_large_image',
-    twitterTitle: fullTitle,
+    twitterTitle: title,
     twitterDescription: description,
     twitterImage: ogImage,
     robots,

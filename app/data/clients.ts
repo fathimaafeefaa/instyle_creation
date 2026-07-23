@@ -5,14 +5,7 @@
  * Logo paths will be filled in when assets are supplied.
  */
 
-export interface Client {
-  id: string
-  name: string
-  /** Path to logo SVG/PNG — add after assets are supplied */
-  logo?: string
-  /** External website (optional, for linking) */
-  url?: string
-}
+import type { Client } from '~/types'
 
 export const clients: Client[] = [
   { id: 'emaar',       name: 'Emaar Properties' },
